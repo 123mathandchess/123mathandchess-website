@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700;800&family=Reddit+Sans:wght@700;800&display=swap');
+@import "tailwindcss";
+
+@theme inline {
+  --color-primary: #B31515;
+  --color-primary-dark: #8B1010;
+  --color-secondary: #C14343;
+  --color-accent: #2F2C2D;
+  --color-accent-light: #32373c;
+  --color-blue-accent: #3072C9;
+  --color-orange-accent: #F19832;
+  --color-green-accent: #4CAF50;
+  --color-yellow-accent: #FFEB3B;
+  --color-footer-bg: #070809;
+  --color-light-gray: #E7E7E7;
+  --font-heading: 'Reddit Sans', sans-serif;
+  --font-body: 'Noto Sans', sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-accent);
+  background: #ffffff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
