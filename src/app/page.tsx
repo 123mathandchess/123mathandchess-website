@@ -120,6 +120,36 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* SoundCloud + Image Grid */}
+      <section className="bg-white">
+        <div className="max-w-[1280px] mx-auto px-6 py-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div>
+              <iframe
+                width="100%"
+                height="166"
+                scrolling="no"
+                frameBorder="no"
+                allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1883447988&color=%23B31515&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+              />
+              <div style={{ fontSize: '10px', color: '#cccccc', lineBreak: 'anywhere', wordBreak: 'normal', overflow: 'hidden', whiteSpace: 'nowrap', textOverflow: 'ellipsis', fontFamily: 'Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif', fontWeight: 100 }}>
+                <a href="https://soundcloud.com/joseph-choi-278183438" title="123 Math & Chess" target="_blank" rel="nofollow noopener" style={{ color: '#cccccc', textDecoration: 'none' }}>123 Math &amp; Chess</a> · <a href="https://soundcloud.com/joseph-choi-278183438/song" title="123 Math &amp; Chess" target="_blank" rel="nofollow noopener" style={{ color: '#cccccc', textDecoration: 'none' }}>123 Math &amp; Chess</a>
+              </div>
+            </div>
+            <div className="flex items-center justify-center">
+              <Image
+                src="/math-chess-icon.webp"
+                alt="Math and Chess"
+                width={200}
+                height={200}
+                className="w-full max-w-[300px] h-auto"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials */}
       <section className="bg-white py-16">
         <div className="max-w-[1280px] mx-auto px-6">
@@ -127,10 +157,9 @@ export default function HomePage() {
             {testimonials.map((t, i) => (
               <div
                 key={i}
-                className={`${t.bg} relative rounded-[20px] p-8 pt-8 flex flex-col min-h-[283px]`}
+                className={`${t.bg} rounded-[20px] p-8 pt-8 flex flex-col min-h-[283px]`}
               >
-                <div className="absolute inset-0 bg-accent/40 rounded-[20px]" />
-                <div className="relative z-10 flex flex-col flex-1">
+                <div className="flex flex-col flex-1">
                   <div className="flex gap-1 mb-4 text-yellow-accent text-2xl">
                     {'★'.repeat(t.stars)}
                   </div>
@@ -217,10 +246,9 @@ export default function HomePage() {
             {whyChooseItems.map((item) => (
               <div
                 key={item.title}
-                className={`${item.bg} relative rounded-[20px] p-8 flex flex-col items-center text-center min-h-[320px]`}
+                className={`${item.bg} rounded-[20px] p-8 flex flex-col items-center text-center min-h-[320px]`}
               >
-                <div className="absolute inset-0 bg-accent/40 rounded-[20px]" />
-                <div className="relative z-10 flex flex-col items-center flex-1">
+                <div className="flex flex-col items-center flex-1">
                   <div className="mb-4">{item.icon}</div>
                   <h3 className="font-heading text-2xl font-bold text-white mb-1">
                     {item.title}
