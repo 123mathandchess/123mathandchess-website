@@ -19,7 +19,7 @@ export default function Footer() {
           {/* Logo + intro */}
           <div className="w-full md:w-[27%]">
             <Image
-              src="/logo-white.webp"
+              src="/123-Math-Chess-Logo-White.webp"
               alt="123 Math & Chess Learning Centre"
               width={1920}
               height={772}
@@ -79,7 +79,7 @@ export default function Footer() {
       <div className="bg-primary text-white">
         <div className="max-w-[1280px] mx-auto flex justify-center items-center min-h-[100px] px-6">
           <p className="text-lg text-center">
-            &copy; {new Date().getFullYear()} 123 Math &amp; Chess Learning Centre (123 數學棋藝中心). All rights reserved.
+            Copyright 1996&ndash;2026, 123 Math &amp; Chess Learning Center (123 數學棋藝中心), all rights reserved.
           </p>
         </div>
       </div>
