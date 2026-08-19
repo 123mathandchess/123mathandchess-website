@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
+import Script from 'next/script';
 
 export const metadata: Metadata = {
-  title: "Contact Us",
-  description: "We'd love to hear from you! Whether you have questions about our programs, want to schedule a visit, or need any information, please don't hesitate to reach out.",
+  title: "Contact 123 Math & Chess | Vancouver Math Tutoring | Free Trial",
+  description: "Contact 123 Math & Chess Learning Centre in Vancouver, BC. Book a free trial math assessment, ask about programs for grades 3-12, or schedule a visit. #103-8584 Granville Street. Call (604) 263-4567.",
 };
 
 export default function ContactUsPage() {
@@ -10,13 +11,13 @@ export default function ContactUsPage() {
     <>
       {/* Hero with background image */}
       <section
-        className="relative bg-cover bg-center flex items-end min-h-[325px]"
-        style={{ backgroundImage: "url('/contact-hero.webp')" }}
+        className="relative bg-cover bg-center flex items-center min-h-[325px]"
+        style={{ backgroundImage: "url('/Screenshot-2024-07-08-at-12.26.46 AM.webp')" }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-accent/55 to-[#811E37]" />
-        <div className="relative max-w-[1280px] mx-auto px-6 pb-[90px] w-full text-center">
-          <h1 className="font-heading text-[55px] leading-[56px] font-bold text-white [text-shadow:1px_2px_1px_#474747]">
-            Contact Us
+        <div className="relative max-w-[1280px] mx-auto px-6 pb-[40px] w-full text-center">
+          <h1 className="font-heading text-[48px] leading-[54px] md:text-[48px] md:leading-[56px] lg:text-[55px] lg:leading-[56px] font-bold text-white [text-shadow:1px_2px_1px_#474747]">
+            Contact Our Vancouver Learning Centre
           </h1>
         </div>
       </section>
@@ -24,7 +25,7 @@ export default function ContactUsPage() {
       <div className="max-w-[1280px] mx-auto px-[10px] py-[80px]">
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Left: Contact Info + Map */}
-          <div className="w-full lg:w-[38%]">
+          <div className="w-full lg:w-[38%] reveal-on-scroll-left">
             <h2 className="font-heading text-[30px] font-extrabold text-accent mb-6">
               Our Location &amp; Address
             </h2>
@@ -54,103 +55,20 @@ export default function ContactUsPage() {
           </div>
 
           {/* Right: Form Card */}
-          <div className="w-full lg:w-[60%]">
+          <div className="w-full lg:w-[60%] reveal-on-scroll-right">
             <div className="bg-white border-2 border-blue-accent rounded-[20px] p-[20px] pt-[25px]">
               <h2 className="font-heading text-2xl font-bold text-accent mb-6">
                 Student Enrollment Form
               </h2>
 
-              <form
-                className="space-y-5"
-                action="https://formspree.io/f/your-form-id"
-                method="POST"
-              >
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                  <div>
-                    <label htmlFor="firstName" className="block text-sm font-semibold text-accent mb-1">
-                      First Name *
-                    </label>
-                    <input
-                      type="text"
-                      id="firstName"
-                      name="firstName"
-                      required
-                      className="w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="lastName" className="block text-sm font-semibold text-accent mb-1">
-                      Last Name *
-                    </label>
-                    <input
-                      type="text"
-                      id="lastName"
-                      name="lastName"
-                      required
-                      className="w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-semibold text-accent mb-1">
-                    Email *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    className="w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-semibold text-accent mb-1">
-                    Phone
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    className="w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="program" className="block text-sm font-semibold text-accent mb-1">
-                    Program of Interest
-                  </label>
-                  <select
-                    id="program"
-                    name="program"
-                    className="w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary bg-white"
-                  >
-                    <option value="">Select a program...</option>
-                    <option value="elementary-math">Elementary Math (Gr 3-7)</option>
-                    <option value="high-school-math">High School Math (Gr 8-12)</option>
-                    <option value="calculus">Calculus</option>
-                    <option value="chess">Chess Coaching</option>
-                    <option value="physics-chemistry">Physics / Chemistry</option>
-                    <option value="summer">Summer Program</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
-                <div>
-                  <label htmlFor="message" className="block text-sm font-semibold text-accent mb-1">
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={4}
-                    className="w-full border border-gray-300 rounded-md px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary"
-                  />
-                </div>
-                <button
-                  type="submit"
-                  className="bg-primary text-white font-heading text-2xl font-bold px-[30px] py-5 rounded-md hover:bg-secondary transition-colors w-full sm:w-auto"
-                >
-                  Submit Inquiry
-                </button>
-              </form>
+              <div
+                className="deftform"
+                data-form-id="f6e766b8-2171-4aa6-8a84-e3fc8bdcceab"
+                data-form-width="100%"
+                data-form-align="center"
+                data-form-auto-height="1"
+              />
+              <Script src="https://cdn.deftform.com/embed.js" strategy="afterInteractive" />
             </div>
           </div>
         </div>

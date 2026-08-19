@@ -15,6 +15,11 @@
   --color-light-gray: #E7E7E7;
   --font-heading: 'Reddit Sans', sans-serif;
   --font-body: 'Noto Sans', sans-serif;
+  --animate-fade-in-up: fade-in-up 0.6s ease-out forwards;
+  --animate-fade-in: fade-in 0.8s ease-out forwards;
+  --animate-slide-in-left: slide-in-left 0.6s ease-out forwards;
+  --animate-slide-in-right: slide-in-right 0.6s ease-out forwards;
+  --animate-scale-in: scale-in 0.5s ease-out forwards;
 }
 
 body {
@@ -25,4 +30,194 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
+}
+
+/* Keyframes */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Animation utility classes */
+.anim-fade-in-up {
+  animation: fade-in-up 0.6s ease-out forwards;
+}
+.anim-fade-in {
+  animation: fade-in 0.8s ease-out forwards;
+}
+.anim-slide-in-left {
+  animation: slide-in-left 0.6s ease-out forwards;
+}
+.anim-slide-in-right {
+  animation: slide-in-right 0.6s ease-out forwards;
+}
+.anim-scale-in {
+  animation: scale-in 0.5s ease-out forwards;
+}
+
+/* Staggered delays for children */
+.stagger-children > *:nth-child(1) { animation-delay: 0ms; }
+.stagger-children > *:nth-child(2) { animation-delay: 100ms; }
+.stagger-children > *:nth-child(3) { animation-delay: 200ms; }
+.stagger-children > *:nth-child(4) { animation-delay: 300ms; }
+.stagger-children > *:nth-child(5) { animation-delay: 400ms; }
+.stagger-children > *:nth-child(6) { animation-delay: 500ms; }
+.stagger-children > *:nth-child(7) { animation-delay: 600ms; }
+.stagger-children > *:nth-child(8) { animation-delay: 700ms; }
+
+/* Hidden until scrolled into view */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.reveal-on-scroll.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-on-scroll-left {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.reveal-on-scroll-left.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-on-scroll-right {
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.reveal-on-scroll-right.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-on-scroll-scale {
+  opacity: 0;
+  transform: scale(0.96);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+.reveal-on-scroll-scale.revealed {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Smooth transitions for interactive elements */
+a, button {
+  transition: all 0.2s ease;
+}
+
+/* Header logo */
+.header-logo {
+  width: 15%;
+  min-width: 110px;
+  max-width: 170px;
+}
+
+@media (max-width: 1023px) {
+  .header-logo {
+    min-width: 175px;
+    max-width: 270px;
+  }
+}
+
+/* Mobile menu animation */
+.mobile-menu-enter {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+.mobile-menu-enter.open {
+  max-height: 500px;
+  opacity: 1;
+}
+
+/* Card hover lift */
+.card-hover {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+/* Button hover pulse */
+.btn-hover {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btn-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+/* Nav link underline animation */
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--color-primary);
+  transition: width 0.25s ease;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Page fade-in on load */
+main {
+  animation: fade-in 0.5s ease-out;
 }
