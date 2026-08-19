@@ -32,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full">
       <head>
-        <script
+        <script type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
