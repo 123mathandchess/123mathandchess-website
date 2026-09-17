@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: "Math Tutoring Vancouver | Weekly Classes | 123 Math & Chess",
-  description: "Year-round math tutoring in Vancouver, BC. Small classes with 5 students max, 2-hour sessions for grades 3-12. $57/session individual, $56/session family. Free trial and assessment available.",
+  description: "Year-round math tutoring in Vancouver, BC. Small classes with 5 students max, 2-hour sessions for grades 3-12. $65/session individual, $64/session family. Free trial and assessment available.",
 };
 
 export default function WeeklyClassesPage() {
@@ -33,12 +33,12 @@ export default function WeeklyClassesPage() {
           <div className="flex flex-col sm:flex-row justify-center gap-4 max-w-[600px] mx-auto mb-6">
             <div className="bg-primary text-white rounded-xl px-8 py-6 flex-1 shadow-md card-hover">
               <p className="font-heading text-lg font-extrabold mb-1">Individual</p>
-              <p className="text-3xl font-extrabold">$57</p>
+              <p className="text-3xl font-extrabold">$65</p>
               <p className="text-white/80 text-sm">per session</p>
             </div>
             <div className="bg-green-accent text-white rounded-xl px-8 py-6 flex-1 shadow-md card-hover">
               <p className="font-heading text-lg font-extrabold mb-1">Family</p>
-              <p className="text-3xl font-extrabold">$56</p>
+              <p className="text-3xl font-extrabold">$64</p>
               <p className="text-white/80 text-sm">per session</p>
             </div>
           </div>

@@ -289,7 +289,7 @@ export default function HomePage() {
               },
               {
                 q: "How much do math tutoring sessions cost?",
-                a: "Individual sessions are $57 each. Family rate is $56 per session. Every session runs for 2 hours, giving students ample time to work through concepts with their teacher.",
+                a: "Individual sessions are $65 each. Family rate is $64 per session. Every session runs for 2 hours, giving students ample time to work through concepts with their teacher.",
               },
               {
                 q: "Where are you located in Vancouver?",
@@ -344,7 +344,7 @@ export default function HomePage() {
                     "name": "How much do math tutoring sessions cost?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "Individual sessions are $57 each. Family rate is $56 per session. Every session runs for 2 hours, giving students ample time to work through concepts with their teacher.",
+                      "text": "Individual sessions are $65 each. Family rate is $64 per session. Every session runs for 2 hours, giving students ample time to work through concepts with their teacher.",
                     },
                   },
                   {

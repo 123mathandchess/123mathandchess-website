@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     template: "%s | 123 Math & Chess Learning Centre",
   },
   description:
-    "Vancouver math tutoring and chess coaching for grades 3-12 since 2006. Small classes of 5 students, BC-certified teachers, $57/session. Free trial assessment. Located on Granville Street.",
+    "Vancouver math tutoring and chess coaching for grades 3-12 since 2006. Small classes of 5 students, BC-certified teachers, $65/session individual, $64/session family. Free trial assessment. Located on Granville Street.",
   icons: {
     icon: "/Favicon.webp",
   },
