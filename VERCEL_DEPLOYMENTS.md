@@ -102,3 +102,15 @@ See the existing [repository README](https://github.com/123mathandchess/123matha
 
 For every future release, append the UTC timestamp, intended project ID/environment, exact source SHA (or archived uploaded-tree identifier), deployment ID, concise change summary, tests actually run, live-domain checks, migrations/configuration changes by name only, remaining limitations, and the previous known-good artifact. Distinguish attempted, preview and live releases. Keep missing evidence explicit. Authenticate through access@thejclabs.com in the existing thejclabs team and verify the project by ID before any release.
 
+
+## Production repair — October 15, 2026 (UTC)
+
+Corrected the structured-data script type that caused the browser to execute JSON as JavaScript. The rebuilt source preserves the existing live $65 individual / $64 family tuition. The previous CLI artifact had newer prices than its recorded Git commit; all six routes were compared before replacement.
+
+- Project: `prj_30k9Brh2Qm1pkPPQosbJU0iZwJCk`; existing `thejclabs` Pro team, login `access@thejclabs.com`.
+- Production: `dpl_FKnEfsDiLF5NZgEiiRKfTQvtGtgk`; staged, checked and promoted. Uploaded source commit `2d4f427cd25b1602371b8bcba3333fd66257572b`, tree `5d9e57e01fe6db5a4b75ff51e390e9335071453c`, based on `f69b558bf179c5a52f4867784e6d1ea7ff8f272a`. Source repository publication remains pending; this is a CLI artifact.
+- Checks: TypeScript and production build; six-route text/link/image comparison; both schema blocks parse as JSON; 25 executable inline scripts compile; staged and live home browser have no console errors. Live tuition is retained. Contact delivery was not submitted or retested.
+- Existing live domain `123mathandchess.com` serves the repair. No domain attachment/redirect or environment setting was edited. No migration.
+- Previous artifact: `dpl_AZjL3Ep7SnfgoGQzTUGTo4zGTzuS`.
+
+Documentation-branch builds are now skipped by the project Ignored Build Step. Other branches keep their previous behavior; skipping documentation is distinct from a successful application build.
