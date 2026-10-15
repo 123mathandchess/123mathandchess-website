@@ -1,0 +1,90 @@
+diff --git a/src/app/layout.tsx b/src/app/layout.tsx
+index 77e1e95..61e7494 100644
+--- a/src/app/layout.tsx
++++ b/src/app/layout.tsx
+@@ -42,6 +42,7 @@ export default function RootLayout({
+     <html lang="en" className="h-full">
+       <head>
+         <script
++          type="application/ld+json"
+           dangerouslySetInnerHTML={{
+             __html: JSON.stringify({
+               "@context": "https://schema.org",
+diff --git a/src/app/page.tsx b/src/app/page.tsx
+index 7335260..d0a1858 100644
+--- a/src/app/page.tsx
++++ b/src/app/page.tsx
+@@ -289,7 +289,7 @@ export default function HomePage() {
+               },
+               {
+                 q: "How much do math tutoring sessions cost?",
+-                a: "Individual sessions are $57 each. Family rate is $56 per session. Every session runs for 2 hours, giving students ample time to work through concepts with their teacher.",
++                a: "Individual sessions are $65 each. Family rate is $64 per session. Every session runs for 2 hours, giving students ample time to work through concepts with their teacher.",
+               },
+               {
+                 q: "Where are you located in Vancouver?",
+@@ -344,7 +344,7 @@ export default function HomePage() {
+                     "name": "How much do math tutoring sessions cost?",
+                     "acceptedAnswer": {
+                       "@type": "Answer",
+-                      "text": "Individual sessions are $57 each. Family rate is $56 per session. Every session runs for 2 hours, giving students ample time to work through concepts with their teacher.",
++                      "text": "Individual sessions are $65 each. Family rate is $64 per session. Every session runs for 2 hours, giving students ample time to work through concepts with their teacher.",
+                     },
+                   },
+                   {
+diff --git a/src/app/summer-program/page.tsx b/src/app/summer-program/page.tsx
+index 5477fd3..a03aa9b 100644
+--- a/src/app/summer-program/page.tsx
++++ b/src/app/summer-program/page.tsx
+@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
+ 
+ export const metadata: Metadata = {
+   title: "Summer Math Program Vancouver | July-August Classes | 123 Math & Chess",
+-  description: "Summer math classes in Vancouver for grades 3-12. Get ahead or catch up on challenging topics. 2-hour sessions, $57/session. Chess coaching with candidate Chess Master Toni Deline also available.",
++  description: "Summer math classes in Vancouver for grades 3-12. Get ahead or catch up on challenging topics. 2-hour sessions, $65/session. Chess coaching with candidate Chess Master Toni Deline also available.",
+ };
+ 
+ export default function SummerProgramPage() {
+@@ -47,12 +47,12 @@ export default function SummerProgramPage() {
+               <div className="flex flex-col sm:flex-row gap-3 mb-6">
+                 <div className="bg-white/20 backdrop-blur-sm text-white rounded-xl px-6 py-5 flex-1 border border-white/20 card-hover">
+                   <p className="font-heading text-lg font-extrabold mb-1">Individual</p>
+-                  <p className="text-3xl font-extrabold">$57</p>
++                  <p className="text-3xl font-extrabold">$65</p>
+                   <p className="text-white/70 text-sm">per session</p>
+                 </div>
+                 <div className="bg-white/20 backdrop-blur-sm text-white rounded-xl px-6 py-5 flex-1 border border-white/20 card-hover">
+                   <p className="font-heading text-lg font-extrabold mb-1">Family</p>
+-                  <p className="text-3xl font-extrabold">$56</p>
++                  <p className="text-3xl font-extrabold">$64</p>
+                   <p className="text-white/70 text-sm">per session</p>
+                 </div>
+               </div>
+diff --git a/src/app/weekly-classes/page.tsx b/src/app/weekly-classes/page.tsx
+index 5137527..513a948 100644
+--- a/src/app/weekly-classes/page.tsx
++++ b/src/app/weekly-classes/page.tsx
+@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
+ 
+ export const metadata: Metadata = {
+   title: "Math Tutoring Vancouver | Weekly Classes | 123 Math & Chess",
+-  description: "Year-round math tutoring in Vancouver, BC. Small classes with 5 students max, 2-hour sessions for grades 3-12. $57/session individual, $56/session family. Free trial and assessment available.",
++  description: "Year-round math tutoring in Vancouver, BC. Small classes with 5 students max, 2-hour sessions for grades 3-12. $65/session individual, $64/session family. Free trial and assessment available.",
+ };
+ 
+ export default function WeeklyClassesPage() {
+@@ -33,12 +33,12 @@ export default function WeeklyClassesPage() {
+           <div className="flex flex-col sm:flex-row justify-center gap-4 max-w-[600px] mx-auto mb-6">
+             <div className="bg-primary text-white rounded-xl px-8 py-6 flex-1 shadow-md card-hover">
+               <p className="font-heading text-lg font-extrabold mb-1">Individual</p>
+-              <p className="text-3xl font-extrabold">$57</p>
++              <p className="text-3xl font-extrabold">$65</p>
+               <p className="text-white/80 text-sm">per session</p>
+             </div>
+             <div className="bg-green-accent text-white rounded-xl px-8 py-6 flex-1 shadow-md card-hover">
+               <p className="font-heading text-lg font-extrabold mb-1">Family</p>
+-              <p className="text-3xl font-extrabold">$56</p>
++              <p className="text-3xl font-extrabold">$64</p>
+               <p className="text-white/80 text-sm">per session</p>
+             </div>
+           </div>
