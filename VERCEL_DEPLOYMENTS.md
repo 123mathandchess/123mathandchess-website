@@ -109,7 +109,7 @@ Corrected the structured-data script type that caused the browser to execute JSO
 
 - Project: `prj_30k9Brh2Qm1pkPPQosbJU0iZwJCk`; existing `thejclabs` Pro team, login `access@thejclabs.com`.
 - Production: `dpl_FKnEfsDiLF5NZgEiiRKfTQvtGtgk`; staged, checked and promoted. Uploaded source commit `2d4f427cd25b1602371b8bcba3333fd66257572b`, tree `5d9e57e01fe6db5a4b75ff51e390e9335071453c`, based on `f69b558bf179c5a52f4867784e6d1ea7ff8f272a`. The exact reproducible repair patch is published here as `VERCEL_REPAIR_2026-10-15.patch` at `1652d17cc07e694e05e6889613ef26de8d8f7cf3`. Apply it to the source base above; do not blindly rebuild the older default branch. Production remains the tested CLI artifact.
-- Checks: TypeScript and production build; six-route text/link/image comparison; both schema blocks parse as JSON; 25 executable inline scripts compile; staged and live home browser have no console errors. Live tuition is retained. Contact delivery was not submitted or retested.
+- Checks: TypeScript and production build; six-route text/link/image comparison; both schema blocks parse as JSON; 25 executable inline scripts compile; staged and live home browser have no console errors. Live tuition is retained. The contact form is hosted separately by Deftform; Joseph confirmed on October 15, 2026 that it is working. No additional delivery test is outstanding for this Vercel repair.
 - Existing live domain `123mathandchess.com` serves the repair. No domain attachment/redirect or environment setting was edited. No migration.
 - Previous artifact: `dpl_AZjL3Ep7SnfgoGQzTUGTo4zGTzuS`.
 
